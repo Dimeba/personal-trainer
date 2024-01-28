@@ -50,6 +50,10 @@
 	}
 }
 
+.button:hover {
+	background-color: white;
+}
+
 .highlights {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);

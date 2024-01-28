@@ -2,13 +2,14 @@
 import styles from './Hero.module.scss'
 
 // components
+import Container from './Container'
 import Image from 'next/image'
 import ImageContainer from './ImageContainer'
 
 const Hero = ({ hero }) => {
 	return (
 		<section id='hero' className={styles.hero}>
-			<div className='sectionContainer'>
+			<Container>
 				<div className={styles.heroHeadline}>
 					<div>
 						<p className={styles.name}>{hero.fields.name}</p>
@@ -21,9 +22,9 @@ const Hero = ({ hero }) => {
 						<Image src='/arrow.svg' width={32} height={12} alt='Button Arrow' />
 					</div>
 				</div>
-			</div>
+			</Container>
 
-			<div className='sectionContainer'>
+			<Container>
 				<ImageContainer
 					src='/heroMobile.jpg'
 					className={styles.mobileHero}
@@ -42,7 +43,7 @@ const Hero = ({ hero }) => {
 
 					<p className={styles.description}>{hero.fields.description}</p>
 				</div>
-			</div>
+			</Container>
 		</section>
 	)
 }
