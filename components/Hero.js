@@ -1,8 +1,50 @@
 // styles
 import styles from './Hero.module.scss'
 
-const Hero = () => {
-	return <section className={styles.hero}>Petar Salovic</section>
+// components
+import Image from 'next/image'
+import ImageContainer from './ImageContainer'
+
+const Hero = ({ hero }) => {
+	return (
+		<section id='hero' className={styles.hero}>
+			<div className='sectionContainer'>
+				<div className={styles.heroHeadline}>
+					<div>
+						<p className={styles.name}>{hero.fields.name}</p>
+						<h1>{hero.fields.tagline.toUpperCase()}</h1>
+					</div>
+					<hr />
+					<p>{hero.fields.subtitle}</p>
+					<div className={styles.button}>
+						<p>KONTAKT</p>
+						<Image src='/arrow.svg' width={32} height={12} alt='Button Arrow' />
+					</div>
+				</div>
+			</div>
+
+			<div className='sectionContainer'>
+				<ImageContainer
+					src='/heroMobile.jpg'
+					className={styles.mobileHero}
+					alt='Hero Image'
+				/>
+				<div className={styles.highlights}>
+					<div className={styles.highlight}>
+						<h1>{hero.fields.clients}</h1>
+						<p>Zadovoljnih Klijenata</p>
+					</div>
+
+					<div className={styles.highlight}>
+						<h1>{hero.fields.experience}</h1>
+						<p>Godina Iskustva</p>
+					</div>
+
+					<p className={styles.description}>{hero.fields.description}</p>
+				</div>
+			</div>
+		</section>
+	)
 }
 
 export default Hero

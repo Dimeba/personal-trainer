@@ -14,17 +14,30 @@ body {
 	scroll-behavior: smooth;
 }
 
-section {
-	width: 1600px;
-	max-width: 90%;
+.sectionContainer {
+	width: 90%;
 	margin: 0 auto;
+	position: relative;
+}
+
+// Font
+h1 {
+	font-size: 4rem;
+}
+
+p {
+	line-height: 2;
 }
 
 @media screen and (max-width: 1024px) {
-}
-
-@media screen and (max-width: 768px) {
-	section {
+	* {
+		text-align: center;
+	}
+	.sectionContainer {
 		max-width: 80%;
+	}
+
+	h1 {
+		font-size: 3rem;
 	}
 }

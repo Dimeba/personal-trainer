@@ -1,0 +1,113 @@
+@use '@/app/base';
+
+.hero {
+	background-image: url('/heroDesktop.jpg');
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	padding: 33vh 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 33vh;
+}
+
+.heroHeadline {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	width: 50%;
+
+	p {
+		font-size: 1.5rem;
+	}
+
+	hr {
+		width: 8rem;
+	}
+}
+
+.name {
+	color: base.$gold;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.button {
+	display: flex;
+	gap: 0.8rem;
+	align-items: center;
+	border: 2px solid base.$gold;
+	border-radius: 5px;
+	width: fit-content;
+	padding: 1rem 2rem;
+	cursor: pointer;
+
+	p {
+		font-size: 1rem;
+		font-weight: 700;
+		color: base.$gold;
+	}
+}
+
+.highlights {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 4rem;
+	align-items: start;
+}
+
+.highlight {
+	grid-column: span 3;
+
+	h1 {
+		color: base.$gold;
+	}
+}
+
+.highlight:first-of-type {
+	border-right: 1px solid white;
+}
+
+.description {
+	grid-column: span 6;
+}
+
+.mobileHero {
+	display: none;
+}
+
+@media screen and (max-width: 1024px) {
+	.hero {
+		background-image: none;
+		padding: 25vh 0;
+		gap: 10vh;
+	}
+
+	.heroHeadline {
+		width: 100%;
+		align-items: center;
+	}
+
+	.highlights {
+		gap: 2rem;
+	}
+
+	.highlight,
+	.description {
+		grid-column: span 12;
+		max-width: 80vw;
+	}
+
+	.highlight:first-of-type {
+		border-right: none;
+		border-bottom: 1px solid white;
+		padding-bottom: 2rem;
+	}
+
+	.mobileHero {
+		display: block;
+		width: 100%;
+		aspect-ratio: 968/1285;
+	}
+}
