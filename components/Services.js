@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const Services = ({ services }) => {
 	return (
-		<section id='usluge'>
+		<section id='usluge' className={styles.servicesContainer}>
 			<Container>
 				<div className={styles.services}>
 					{services.fields.services.map(service => (

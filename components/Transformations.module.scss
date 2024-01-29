@@ -1,0 +1,39 @@
+@use '@/app/base';
+
+.transformationsContainer {
+	margin-bottom: 33vh;
+
+	* {
+		text-align: center;
+	}
+
+	h3 {
+		margin-bottom: 2rem;
+	}
+}
+
+.transformation {
+	grid-column: span 4;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.image {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+}
+
+.description {
+	margin-top: 6rem;
+	text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+	.transformationsContainer {
+		margin-bottom: 100px;
+	}
+
+	.transformation {
+		grid-column: span 12;
+	}
+}

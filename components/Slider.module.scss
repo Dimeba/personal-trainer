@@ -1,0 +1,81 @@
+@use '@/app/base';
+
+.slider {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.sliderArrowContainer {
+	display: none;
+}
+
+.sliderArrow {
+	width: 0.8rem;
+	aspect-ratio: 1 / 2;
+	cursor: pointer;
+}
+
+.sliderArrow:hover {
+	transform: scale(1.2);
+}
+
+.sliderContent {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 2rem;
+	width: 100%;
+
+	> * {
+		animation: slideIn 1s ease-out;
+	}
+}
+
+// animation
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateX(200%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+// bullets
+.bullets {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.bullet {
+	border-radius: 50%;
+	border: 1px solid white;
+	width: 1rem;
+	aspect-ratio: 1 /1;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.bullet.active {
+	background-color: white;
+}
+
+@media screen and (max-width: 1024px) {
+	.sliderArrowContainer {
+		display: block;
+	}
+	.sliderContent {
+		grid-gap: 1rem;
+		width: calc(100% - 4rem);
+	}
+
+	.bullets {
+		display: none;
+	}
+}
