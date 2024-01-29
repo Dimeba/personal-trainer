@@ -17,10 +17,17 @@ const Hero = ({ hero }) => {
 					</div>
 					<hr />
 					<p>{hero.fields.subtitle}</p>
-					<div className={styles.button}>
-						<p>KONTAKT</p>
-						<Image src='/arrow.svg' width={32} height={12} alt='Button Arrow' />
-					</div>
+					<a href='#kontakt'>
+						<div className={styles.button}>
+							<p>KONTAKT</p>
+							<Image
+								src='/arrow.svg'
+								width={32}
+								height={12}
+								alt='Button Arrow'
+							/>
+						</div>
+					</a>
 				</div>
 			</Container>
 
@@ -30,7 +37,7 @@ const Hero = ({ hero }) => {
 					className={styles.mobileHero}
 					alt='Hero Image'
 				/>
-				<div className={styles.highlights}>
+				<div id='o-meni' className={styles.highlights}>
 					<div className={styles.highlight}>
 						<h1>{hero.fields.clients}</h1>
 						<p>Zadovoljnih Klijenata</p>

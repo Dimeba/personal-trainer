@@ -19,9 +19,9 @@ const Transformations = ({ transformations }) => {
 	const last = first + columns
 
 	return (
-		<section id='transformacije' className={styles.transformationsContainer}>
+		<section className={styles.transformationsContainer}>
 			<Container>
-				<h3>{transformations.fields.title}</h3>
+				<h3 id='transformacije'>{transformations.fields.title}</h3>
 
 				<Slider
 					current={current}

@@ -12,9 +12,12 @@ body {
 	box-sizing: border-box;
 	margin: 0;
 	scroll-behavior: smooth;
+	scroll-padding-top: 250px;
 }
 
-section {
+section,
+header,
+footer {
 	overflow: hidden;
 }
 
@@ -37,6 +40,11 @@ h3 {
 
 p {
 	line-height: 2;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
 @media screen and (max-width: 1024px) {

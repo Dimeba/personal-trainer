@@ -1,0 +1,69 @@
+@use '@/app/base';
+
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.4rem 0;
+}
+
+.menu {
+	display: flex;
+	gap: 2rem;
+
+	p {
+		text-transform: uppercase;
+		border-right: 1px solid white;
+		line-height: 1rem;
+		padding-right: 2rem;
+	}
+
+	p:last-of-type {
+		padding-right: 0;
+		border-right: none;
+	}
+}
+
+.socialMedia {
+	display: flex;
+	gap: 1rem;
+}
+
+.hamburger {
+	display: none;
+}
+
+@media screen and (max-width: 1200px) {
+	.header {
+		background-color: black;
+	}
+
+	.nav {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.menu {
+		flex-direction: column;
+		margin: 50px 0;
+
+		p {
+			padding-right: 0;
+			border-right: none;
+		}
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	.hidden {
+		display: none !important;
+	}
+}

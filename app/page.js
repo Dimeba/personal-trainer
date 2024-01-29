@@ -2,6 +2,7 @@
 import { createClient } from 'contentful'
 
 // components
+import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import Transformations from '@/components/Transformations'
@@ -35,6 +36,7 @@ export default async function Home() {
 
 	return (
 		<main>
+			<Header contact={contact.items[0]} />
 			<Hero hero={hero.items[0]} />
 			<Services services={services.items[0]} />
 			<Transformations transformations={transformations.items[0]} />
