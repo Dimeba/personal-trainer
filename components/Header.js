@@ -35,7 +35,9 @@ const Header = ({ contact }) => {
 				}}
 			>
 				<Container newClass={styles.nav}>
-					<Image src='/logo.png' width={99} height={90} alt='Logo' />
+					<a href='/#intro'>
+						<Image src='/logo.png' width={99} height={90} alt='Logo' />
+					</a>
 
 					<div className={styles.hamburger}>
 						<Hamburger

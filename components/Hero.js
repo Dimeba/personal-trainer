@@ -8,7 +8,7 @@ import ImageContainer from './ImageContainer'
 
 const Hero = ({ hero }) => {
 	return (
-		<section id='hero' className={styles.hero}>
+		<section id='intro' className={styles.hero}>
 			<Container>
 				<div className={styles.heroHeadline}>
 					<div>
