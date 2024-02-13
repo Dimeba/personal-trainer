@@ -32,10 +32,11 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	aspect-ratio: 1 / 1;
+	// justify-content: center;
+	// aspect-ratio: 1 / 1;
+	height: 100%;
 	background-color: rgba($color: #000000, $alpha: 0.75);
-	padding: 2rem;
+	padding: 3rem;
 	gap: 2rem;
 
 	* {
@@ -50,6 +51,12 @@
 .description {
 	margin-top: 6rem;
 	text-align: center;
+}
+
+.highlights {
+	* {
+		font-size: 0.8rem !important;
+	}
 }
 
 @media screen and (max-width: 1024px) {

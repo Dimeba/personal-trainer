@@ -4,6 +4,7 @@ import styles from './Services.module.scss'
 // components
 import Container from './Container'
 import Image from 'next/image'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const Services = ({ services }) => {
 	return (
@@ -21,6 +22,10 @@ const Services = ({ services }) => {
 								<h3>{service.fields.title}</h3>
 								<hr />
 								<p>{service.fields.description}</p>
+
+								<div className={styles.highlights}>
+									{documentToReactComponents(service.fields.highlights)}
+								</div>
 							</div>
 						</div>
 					))}
