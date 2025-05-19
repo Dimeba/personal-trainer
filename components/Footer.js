@@ -33,7 +33,7 @@ const Footer = ({ questions, contact }) => {
 					{documentToReactComponents(contact.fields.description)}
 				</div>
 
-				<p>
+				<p className={styles.contactText}>
 					{contact.fields.phone} / {contact.fields.email}
 				</p>
 
